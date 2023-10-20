@@ -23,7 +23,7 @@
         if (!Object.keys(fruitByColor).includes(color)) {
            throw new Error('the color must be: red, yellow, purple')
         }
-        
+
         return fruitByColor[color];
 
         
@@ -50,16 +50,23 @@
     }
 
     // Simplificar esta función
-    let isFirstStepWorking  = false;
-    let isSecondStepWorking = false;
-    let isThirdStepWorking  = false;
-    let isFourthStepWorking = false;
+    let isFirstStepWorking  = true;
+    let isSecondStepWorking = true;
+    let isThirdStepWorking  = true;
+    let isFourthStepWorking = true;
 
     function workingSteps() {
-       return  isFirstStepWorking ? 'First step broken.'   :
-               isSecondStepWorking ? 'Second step broken.' :
-               isThirdStepWorking ? 'Third step broken.'   : 
-               isFourthStepWorking ? 'Fourth step broken.' : null
+
+        if (!isFirstStepWorking) return 'First step broken.'
+        if (!isSecondStepWorking) return 'Second step broken.'
+        if (!isThirdStepWorking) return 'Third step broken.'
+        if (!isFourthStepWorking) return 'Fourth step broken.'
+        return 'Working Property'
+        
+    //    return  !isFirstStepWorking ? 'First step broken.'   :
+    //            !isSecondStepWorking ? 'Second step broken.' :
+    //            !isThirdStepWorking ? 'Third step broken.'   : 
+    //            !isFourthStepWorking ? 'Fourth step broken.' : 'Working property'
     }
 
 
