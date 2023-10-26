@@ -1,6 +1,6 @@
 import './style.css'
 // import './smells-code/01-singleton.js'
-import './smells-code/02-low-coupling'
+import './solid/01-srp'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
